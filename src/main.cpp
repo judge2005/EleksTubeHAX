@@ -6,6 +6,7 @@
  * Based on: https://github.com/SmittyHalibut/EleksTubeHAX
  */
 
+#include <Arduino.h>
 #include <stdint.h>
 #include "GLOBAL_DEFINES.h"
 #include "Buttons.h"

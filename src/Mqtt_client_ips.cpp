@@ -61,6 +61,7 @@ int LastSentStatus = -1;
 
 
 void sendToBroker(char* topic, char* message) {
+#ifdef MQTT_ENABLED
   if (MQTTclient.connected()) {
     char topicArr[100];
     sprintf(topicArr, "%s/%s", MQTT_CLIENT, topic);
@@ -78,6 +79,7 @@ void sendToBroker(char* topic, char* message) {
 #endif    
     delay (120);  
   }
+#endif
 }
 
 void MqttStart() {
